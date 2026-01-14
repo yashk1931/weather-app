@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Weather App</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f4f8;
+            margin: 0;
+            padding: 0;
+        }
+     body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .signup-container {
+            width: 350px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 30px;
+            color: #333333;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-container label {
+            text-align: left;
+            font-weight: 600;
+            color: #555555;
+        }
+
+        .signup-container input {
+            border: 1px solid black;
+            width: 280px;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        
+        .signup-container form #submit {
+            background-color: #6b5b95;
+        }
+        
+        .signup-container form #submit:hover{
+            background-color: #7a6ba1;
+        }
+        
+    </style>
+</head>
+<body>
+       <header>
+        <div class="navbar">
+            <a href="main.html" class="Weather">
+                <h1 class="name">Weather</h1>
+            </a>
+            <nav class="navs">
+                <ul class="nav-icon">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="signup-container">
+            <h2>Sign Up</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+
+            <input type="submit" id="submit" value="Sign Up">
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="login.html">Login</a>
+        </div>
+        </div>
+    <footer>
+        &copy; 2025 Weather App. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+// const API_KEY = "9b54948b82f3e9a37d96a48dec2191ce";
+
+// const input = document.querySelector(".Search_box");
+// const btn = document.querySelector(".Search_bttn");
+
+// function searchCity() {
+//     let city = input.value.trim();
+//     if(city === "") {
+//         alert("Please enter a city name");
+//         return;
+//     }
+//     getWeather(city);
+//      getForecast(city); 
+// }
+
+// btn.addEventListener("click", searchCity);
+// input.addEventListener("keydown", (e) => {
+//     if (e.key === "Enter") {
+//         searchCity();
+//     };
+// });
+
+// async function getWeather(city){
+//     try{
+//         // ✔ Correct API URL for worldwide search
+//         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
+//         const res = await fetch(url);
+//         const data = await res.json();
+
+//         if(data.cod === "404"){
+//             alert("City not found!");
+//             return;
+//         }
+
+//         console.log(data);
+
+//         updateCard(data);
+
+//     } catch (error){
+//         console.log("Error: ", error);
+//         alert("Something went wrong");
+//     }
+// }
+// function updateCard(data){
+//     document.querySelector(".city-name").innerText = data.name;
+//     document.querySelector(".temp").innerText = `Temperature: ${data.main.temp}°C`;
+//     document.querySelector(".humidity").innerText = `Humidity: ${data.main.humidity}%`;
+//     document.querySelector(".condition").innerText = `Condition: ${data.weather[0].description}`;
+//     document.querySelector(".wind").innerText = `Wind: ${data.wind.speed} km/h`;
+
+//     const icon = data.weather[0].main.toLowerCase();
+//     const img = document.querySelector(".weather-img");
+
+//     // if(icon.includes("cloud")){
+//     //     img.src = "images/cloudy.png";
+//     // }
+//     // else if(icon.includes("rain")){
+//     //     img.src = "images/rainy.jpg";
+//     // }
+//     // else if(icon.includes("clear")){
+//     //     img.src = "images/cloudy.png";
+//     // }
+//     // else if(icon.includes("snow")){
+//     //     img.src = "images/snowing.png";
+//     // }
+//     // else if(icon.includes("smoke")){
+//     //     img.src = "images/cloudy.png";
+//     // }
+//     // else if(icon.includes("haze")){
+//     //     img.src = "images/haze.png";
+//     // }
+//     // else if(icon.includes("mist")){
+//     //     img.src = "images/cloudy.png";
+//     // }
+//     // else{
+//     //     img.src = "images/default.jpg";
+//     // }
+
+
+// }
+
+// async function Container(city , name){
+//     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+//     try {
+//     const res = await fetch(url);
+//     const data = await res.json();
+
+//     if(data.cod !== 200){
+//         return;
+//     }
+//         document.getElementById(`${name}-humidity`).innerText = data.main.humidity + "%";
+//         document.getElementById(`${name}-temp`).innerText = data.main.temp + "°C";
+//         document.getElementById(`${name}-condition`).innerText = data.weather[0].description;
+//         document.getElementById(`${name}-wind`).innerText = data.wind.speed + " km/h";
+//     } catch (err) {
+//         console.log("Table weather error:", err);
+//     }
+// }
+
+// window.addEventListener("load", ()=> {
+//     Container("karachi", "karachi");
+//     Container("Hyderabad", "hyderabad");
+//     Container("Islamabad", "islamabad");
+//     Container("Sukkur", "sukkur");
+// });
+
+
+
+const weather = data.weather?.[0]?.main?.toLowerCase() || "default";
+    img.src = weatherImages[weather] || "images/default.jpg";
