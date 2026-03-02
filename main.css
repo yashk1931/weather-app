@@ -92,9 +92,6 @@ body {
     margin-right: 40px;
 }
 
-
-
-/*  */
 .Search_div {
     margin: 0px;
     padding: 0px;
@@ -187,6 +184,119 @@ footer {
 
 .table tr:last-child td {
     border-bottom: none;
+}
+@media(max-width: 992px){
+
+    .navbar{
+        padding: 1rem;
+    }
+    .name{
+        margin-left: 10px;
+    }
+    .navs{
+        margin-right: 10px;
+    }
+    .companycard{
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .companycard img{
+        width: 80%;
+        height: auto;
+        margin: 20px 0;
+    }
+    .name_con{
+        margin: 0;
+    }
+    .cards{
+        height: auto;
+        padding: 20px;
+    }
+    .Search_box,input{
+        width: 300px;
+    }
+}
+
+@media(max-width: 600px){
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-icon{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-icon a{
+        padding: 10px;
+    }
+    .Search_box,input{
+        width: 200px;
+        font-size: 16px;
+    }
+    .Search_bttn{
+        width: 70px;
+        font-size: 14px;
+    }
+    .companycard{
+        width: 100%;
+    }
+    .cards{
+        gap: 15px;
+    }
+    .table{
+        font-size: 12px;
+    }
+    .table th,.table td{
+        padding: 8px;
+    }
+    footer{
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}
+@media(max-width: 350px){
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-icon{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-icon a{
+        padding: 10px;
+    }
+    .Search_box,input{
+        width: 200px;
+        font-size: 16px;
+    }
+    .Search_bttn{
+        width: 70px;
+        font-size: 14px;
+    }
+    .companycard{
+        margin-left: 20px;
+        width: 100%;
+    }
+    .cards{
+        gap: 15px;
+    }
+    .table{
+        font-size: 12px;
+    }
+    .table th,.table td{
+        padding: 8px;
+    }
+    footer{
+        font-size: 0.8rem;
+        padding: 2rem;
+    }
 }
 
 .table td:first-child {
